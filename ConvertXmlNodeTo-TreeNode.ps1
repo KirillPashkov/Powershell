@@ -1,8 +1,8 @@
 function ConvertXmlNodeTo-TreeNode
 {
     param(
-        [System.Xml.XmlNode]$xmlNode,
-        [System.Windows.Forms.TreeNodeCollection]$treeNodes
+        [System.Xml.XmlNode]$XmlNode,
+        [System.Windows.Forms.TreeNodeCollection]$TreeNodes
     )
         $xmlNodeName = if ($xmlNode.LocalName -eq 'Name') {$xmlNode.Name} else {$xmlNode.LocalName}
 
@@ -55,6 +55,6 @@ function ConvertXmlNodeTo-TreeNode
 
 #$TreeView.Nodes.Clear();
 
-#ConvertXmlNodeTo-TreeNode -XmlNode $x -treeNodes $TreeView.Nodes
+#ConvertXmlNodeTo-TreeNode -XmlNode $x -TreeNodes $TreeView.Nodes
 
 #$TreeView.Nodes[0].ExpandAll()
